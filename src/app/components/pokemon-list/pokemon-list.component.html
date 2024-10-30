@@ -1,0 +1,12 @@
+@if (generation(); as generation) {
+<div>
+  <h1>List of Pokémon</h1>
+  <ul>
+    @for (pokemon of generation.pokemon_species; track pokemon.name) {
+    <li>
+      {{ pokemon.name }}
+    </li>
+    }
+  </ul>
+</div>
+}
