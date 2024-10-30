@@ -1,14 +1,15 @@
-import { AsyncPipe } from '@angular/common';
+import { DecimalPipe } from '@angular/common';
 import { Component, input } from '@angular/core';
-import { PokemonGeneration } from '../../model/pokemon';
+import { RouterLink } from '@angular/router';
+import { Pokedex } from '../../model/pokemon';
 
 @Component({
   standalone: true,
   selector: 'app-pokemon-list',
   templateUrl: './pokemon-list.component.html',
   styleUrls: ['./pokemon-list.component.scss'],
-  imports: [AsyncPipe],
+  imports: [DecimalPipe, RouterLink],
 })
 export class PokemonListComponent {
-  public generation = input.required<PokemonGeneration>();
+  public pokedex = input.required<Pokedex>();
 }

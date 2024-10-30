@@ -1,10 +1,16 @@
-@if (generation(); as generation) {
+@if (pokedex(); as pokedex) {
 <div>
   <h1>List of Pokémon</h1>
   <ul>
-    @for (pokemon of generation.pokemon_species; track pokemon.name) {
+    @for (pokemon of pokedex.pokemon_entries; track pokemon.entry_number) {
     <li>
-      {{ pokemon.name }}
+      <a [routerLink]="['/pokemon', pokemon.entry_number]"
+        >{{
+          (pokemon.entry_number | number : "3.0") +
+            ": " +
+            pokemon.pokemon_species.name
+        }}
+      </a>
     </li>
     }
   </ul>

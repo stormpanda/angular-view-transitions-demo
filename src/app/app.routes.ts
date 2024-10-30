@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
-import { resolveGeneration } from './resolver/generation-resolver';
+import { resolvePokedex } from './resolver/pokedex-resolver';
+import { resolvePokemonDetails } from './resolver/pokemon-details-resolver';
 
 export const routes: Routes = [
   {
@@ -9,11 +10,19 @@ export const routes: Routes = [
         './pages/page-pokemon-generation/page-pokemon-generation.component'
       ).then((m) => m.PagePokemonGenerationComponent),
     resolve: {
-      generation: resolveGeneration,
+      pokedex: resolvePokedex,
+    },
+  },
+  {
+    path: 'pokemon/:id',
+    loadComponent: () =>
+      import('./pages/page-pokemon-details/page-pokemon-details.component'),
+    resolve: {
+      pokemonDetails: resolvePokemonDetails,
     },
   },
   {
     path: '**',
-    redirectTo: 'generation/1',
+    redirectTo: 'generation/kanto',
   },
 ];
