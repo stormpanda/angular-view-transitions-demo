@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 import { PokemonListComponent } from '../../components/pokemon-list/pokemon-list.component';
-import { Pokedex } from '../../model/pokemon';
+import { Pokedex } from '../../model/pokedex';
 
 @Component({
   selector: 'app-page-pokemon-generation',

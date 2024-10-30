@@ -1,7 +1,7 @@
 import { inject } from '@angular/core';
 import { ActivatedRouteSnapshot, ResolveFn } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
-import { Pokedex } from '../model/pokemon';
+import { Pokedex } from '../model/pokedex';
 import { PokemonService } from '../services/pokemon.service';
 
 export const resolvePokedex: ResolveFn<Pokedex> = (

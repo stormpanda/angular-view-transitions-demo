@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 import { PokemonDetailsComponent } from '../../components/pokemon-details/pokemon-details.component';
-import { PokemonDetails } from '../../model/pokemon';
+import { PokemonDetails } from '../../model/pokemon-details';
 
 @Component({
   selector: 'app-page-pokemon-details',

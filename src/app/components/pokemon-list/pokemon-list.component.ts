@@ -1,7 +1,7 @@
 import { DecimalPipe } from '@angular/common';
 import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Pokedex } from '../../model/pokemon';
+import { Pokedex } from '../../model/pokedex';
 
 @Component({
   standalone: true,
